@@ -3,15 +3,20 @@ import './App.css';
 
 function App() {
   const vehicleOne = {
-      brand: 'Ford',
-      model: 'Mustang',
-      type: 'car',
-      year: 2021, 
-      color: 'red'
+    brand: 'Ford',
+    model: 'Mustang',
+    type: 'car',
+    year: 2021, 
+    color: 'red',
+    registration: {
+      city: 'Houston',
+      state: 'Texas',
+      country: 'USA'
     }
+  }
  
-    function myVehicle({type, color, brand, model}) {
-      return 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + '.';
+    function myVehicle({model, registration: {state}}) {
+      return 'My ' + model + ' is registered in ' + state + '.';
     }
     const message = myVehicle(vehicleOne);
   
